@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+	<link rel="stylesheet"  href="./lib/tau/mobile/theme/default/tau.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<title>Tizen Web IDE - Template - Tizen - Tizen Web UI Framework - Multi Page</title>
+</head>
+
+<body>
+
+	<!-- Start of first page: #one -->
+	<div class="ui-page" id="one">
+		<div class="ui-header">
+			<h1>Multi-page application</h1>
+		</div><!-- /header -->
+
+		<div class="ui-content">
+			<div id="main" class="page">
+       		  <div class="contents">
+            	<span id="content-text"></span>
+      		  </div>
+        
+        	<div class ="ima">
+        		<img alt="" src="./icon.png">
+       		 </div>
+        
+        	<div id = "buttons">
+        	<ul class="ui-listview">
+        	<li class="ui-group-index"> Button:</li>
+				 <li class="ui-li-anchor"><input type = "button" id = "show" value = "show_image">
+        		 <li class="ui-li-anchor"><input type = "button" id = "hide" value = "hide_image">
+        		 <li class="ui-li-anchor"><input type = "button" id = "rasm" value = "rasmer">
+        	
+       		</div>
+    	</div>
+		<ul class="ui-listview">
+			 <li class="ui-group-index">Show internal pages:</li>
+				 <li class="ui-li-anchor"><a href="#popup" data-rel="popup" data-position-to="window">Show page "popup"</a></li>
+				 <li class="ui-li-anchor"><a href="#two">Show page "two"</a></li>
+			</ul>
+			<div id="popup" class="ui-popup center_title_1btn">
+				<div class="ui-popup-header">Popup title</div>
+				<div class="ui-popup-content popup-content-padding">Pop-up dialog box, a child window that blocks user interact to the parent windows</div>
+				<div class="ui-popup-footer">
+					<a class="ui-btn ui-inline" data-rel="back">Button</a>
+		</div>
+			</div>
+		</div><!-- /content -->
+	</div><!-- /page one -->
+
+
+	<!-- Start of second page: #two -->
+	<div class="ui-page" id="two">
+		<div class="ui-header">
+			<h1>Two</h1>
+		</div><!-- /header -->
+
+		<div class="ui-content">
+			<video width="300" height="200" src= "./video/_TouchCube.mp4" type="video/mp4">
+			</video>
+			<iframe width="300" height="200" src="https://youtu.be/DEkNFao5IdU" frameborder="0" allowfullscreen></iframe>
+			<p><a href="#one" class="ui-btn ui-inline">Back to page "one"</a></p>
+			<p><a href="#three" class="ui-btn ui-inline">Next</a></p>
+		</div><!-- /content -->
+	</div><!-- /page two -->
+	
+	<div class="ui-page" id="three">
+		<div class="ui-header">
+			<h1>Three</h1>
+			
+			<canvas id='draw' width='260' height='200' style='border:1px solid;'></canvas> 
+			<script type='text/javascript'>
+			var canvas=document.getElementById("draw")
+			var x=canvas.getContext("2d");
+			x.font = '40pt Times New Roman'
+			x.fillText("Tizen", 15, 40);
+			x.fillStyle = "#FF0000";
+			x.fillText("HTML5", 15, 125);  
+			x.fillStyle = "#0000FF";
+			x.fillText("Javascript", 15, 80);
+			x.font = '30pt Times New Roman'
+			x.fillText("canvas", 85, 140);
+			</script>
+			 		 	<canvas id='shahmat' width='160' height='160'></canvas> 
+			<script type='text/javascript'>
+			var canvas=document.getElementById("shahmat")
+			var x=canvas.getContext("2d");
+			var black =0;
+			for (i=0; i<8; i++){
+				for (j=0; j<8; j++){
+					if(j !==0)
+						if(black === 1){
+							x.fillStyle = #000;
+							black = 0;
+						else{
+								x.fillStyle = "#FFF";
+								black = 1;
+							}
+						
+						x.fillRect(20*j, 20*i, 20, 20);
+					}
+					
+				}
+ 		 	</script>
+			<p><a href="#one" class="ui-btn ui-inline">Back to page "one"</a></p>
+			<p><a href="#four" class="ui-btn ui-inline">next</a></p>
+	</div>
+	</div>
+	<div class="ui-page" id="four">
+		<div class="ui-header">
+			<h1>four</h1>
+			<canvas id='kw' width='300' height='200'></canvas> 
+			<script type='text/javascript'>
+			var canvas=document.getElementById("kw")
+			var x=canvas.getContext("2d");
+			x.fillRect(20,50,20,20);
+			
+			var a = 20;
+			var b = 20;
+			var d = 20;
+			var canvas=document.getElementById("kw")
+			var x=canvas.getContext("2d");
+			x.fillRect(20,50,a,b);
+			 setInterval(function(){
+			 	if (a>200) d = -20;
+			 	if (a<20) d = 20;
+			 	a = a+d;
+			 x.clearRect(0,0,300,200);
+			 x.fillRect(20,50,a,b);},200);
+ 		 	</script>	
+
+		<p><a href="#one" class="ui-btn ui-inline">Back to page "one"</a></p>
+	</div>
+	</div>
+	<script type="text/javascript" src="./lib/jquery.js"></script>
+	<script type="text/javascript" src="./lib/tau/mobile/js/tau.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

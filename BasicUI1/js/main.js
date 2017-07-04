@@ -19,11 +19,7 @@ window.onload = function() {
     //    contentText.innerHTML = (contentText.innerHTML === "Basic") ? "Tizen" : "Basic";
   //  });
     
-    document.querySelector('#rasm').addEventListener("click", function(){
-    var contentText = document.querySelector('#content-text');
-    contentText.innerHTML = 'Разрешение экрана: <b>'+screen.width+'X'+ screen.height+'</b>';
-    contentText.style.display = (contentText.style.display === "block") ? "none" : "block";
-    });
+   
     
     document.querySelector('#show').addEventListener("click", function(){
     	var contentText = document.querySelector('.ima');
@@ -33,4 +29,9 @@ window.onload = function() {
     	var contentText = document.querySelector('.ima');
     	contentText.style.display = "none";
     });
+    document.querySelector('#rasm').addEventListener("click", function(){
+        var contentText = document.querySelector('#content-text');
+        contentText.innerHTML = 'Разрешение экрана: <b>'+screen.width+'X'+ screen.height+'</b>';
+        contentText.style.display = (contentText.style.display === "block") ? "none" : "block";
+        });
 };
