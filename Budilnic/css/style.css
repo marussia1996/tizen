@@ -1,0 +1,26 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #222222;
+    color: #ffffff;
+}
+.page {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.contents {
+	margin-top: 25%;
+    margin-right: 25%; /* Отступ справа */
+    margin-left: 30%; /* Отступ слева */
+}
+#content-text {
+    font-weight: bold;
+    font-size: 5em;
+}
+#jsalarmclock span{
+margin-right: 25%;
+}    
