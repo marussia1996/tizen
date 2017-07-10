@@ -7,5 +7,6 @@
     <icon src="icon.png"/>
     <name>Budilnic</name>
     <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/alarm"/>
     <tizen:profile name="wearable"/>
 </widget>
