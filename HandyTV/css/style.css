@@ -1,0 +1,138 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #222222;
+    color: #ffffff;
+}
+.page {
+    width: 100%;
+    height: 100%;
+/*    display: table;*/
+}
+
+
+.ui-title {
+   font-size: 26px !important;   
+   font-family: "Roboto" !important;
+   font-weight: normal !important;
+   color: rgb(101,177,255) !important;
+}
+
+
+/* --------------------------
+// Intro page
+*/
+#page-intro {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.intro_img {
+  background-image: url("../images/hp_tv_dock_2.png");
+  background-color: rgb(5,93,138);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; 
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;      
+}
+
+
+/* --------------------------
+// Searching page
+*/
+
+
+/* --------------------------
+// No device page
+*/
+#page-nodevice {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nodevice_img {
+  background-image: url("../images/Binoculars_looking_view_zoom-512.png");
+  background-color: rgb(5,93,138);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; 
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;      
+}
+
+
+/* --------------------------
+// Select device page
+*/
+
+
+/* --------------------------
+// Workflow page
+*/
+/* App styles*/
+.select-action-system-button {
+  background-repeat: no-repeat;
+/*  background-size: 300px 300px;
+  background-position: -100px -100px;*/ 
+  background-size: 100% 100%;
+  background-color: rgb(0,0,0);
+  border: 0px;  
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  margin: 0;
+  position:absolute;
+}
+
+.button-large {
+  width: 128px;
+  height: 128px;
+}
+
+#button_placeholder{
+  position:relative;
+  width:360px;
+  height:360px;
+}
+#select-channel-up {
+  background-image: url("../images/downarrow.png");
+  left: 155px;
+  top:30px;
+}
+
+#select-channel-down {
+  background-image: url("../images/uparrow.png");
+  left: 155px;
+  top:274px;
+}
+
+#select-volume-up {
+  background-image: url("../images/volume-up-64.png");
+}
+
+#select-volume-down {
+  background-image: url("../images/volume-down-64.png");
+}
+
+#select-video-play {
+  background-image: url("../images/play.png");
+  left: 125px;
+  top:116px;
+}
+#select-video-play.pause {
+  background-image: url("../images/pause.png");
+  left:120px;
+}
+
+
+

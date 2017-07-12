@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Tizen TV Control" />
+
+    <title>Tizen Wearable Web Basic Application</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+    <link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.css">
+</head>
+
+<body>
+   <!-- Intro page -->  
+   <div class="ui-page ui-page-active" id="page-intro" data-enable-page-scroll="false">
+		<div class="ui-content content-padding intro_img">
+		</div>                
+   </div>
+   
+   <!-- Searching page -->  
+   <div class="ui-pag" id="page-searching" data-enable-page-scroll="false">
+		<div class="ui-content content-padding">
+            <span id="content-text">Searching...</span>
+		</div>                
+   </div>   
+   
+   <!-- No device page -->  
+   <div class="ui-page" id="page-nodevice" data-enable-page-scroll="false">
+		<div class="ui-content content-padding nodevice_img">
+<!--     		<div class="intro_block">
+    		</div>  -->					
+		</div>                
+   </div>
+    
+	<!--  Select device page  -->
+	<div id="page-selectdevice" class="ui-page" data-enable-page-scroll="false">
+		<header class="ui-header">
+		   <h2 class="ui-title">Select TV</h2>
+		</header>
+		<div class="ui-content">
+			<ul class="ui-listview" id="device_list">
+			</ul>
+		</div>
+	</div>	 
+	
+	
+	<!--  Workflow page  -->
+	<div class="ui-page" id="page-workflow"  data-enable-page-scroll="false">
+		<header class="ui-header" style="height:44px;" hidden="true" >
+		</header>	
+		<div class="ui-content" id="button_placeholder">
+		   <span >
+		      <input type="button" id="select-channel-up" class="select-action-system-button" />
+		      <input type="button" id="select-volume-up" hidden="true" class="select-action-system-button" /> 
+		   </span>
+		   <span >
+		      <input type="button" id="select-video-play" class="select-action-system-button button-large" />
+		   </span>
+		   <span>
+		      <input type="button" id="select-channel-down" class="select-action-system-button" />
+		      <input type="button" id="select-volume-down" hidden="true" class="select-action-system-button" />
+		   </span>
+		</div>
+		<footer class="ui-footer" hidden="true">
+		</footer>
+		<progress class="ui-circle-progress" id="volumeprogress" max="100" value="0"></progress>		
+	</div>	
+	
+    
+    <script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+    <script type="text/javascript" src="js/circle-helper.js"></script>
+    <script type="text/javascript" src="lib/tau/wearable/js/jquery.js"></script>
+    <script type="text/javascript" src="lib/msf-2.3.2.min.js"></script>
+    <script type="text/javascript" src="lib/state-machine.js"></script>
+    
+    <script type="text/javascript" src="js/device_controller.js"></script>
+    <script type="text/javascript" src="js/device_discover_manager.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/ui_controller.js"></script>
+
+    <script src="js/main.js"></script>    
+</body>
+
+</html>
